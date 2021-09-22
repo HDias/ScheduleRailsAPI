@@ -1,24 +1,5 @@
-# README
+# Schedule API with Rails 6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Diagram
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Entity Relationship Diagram](./docs/models.png "Diagram to Schedule API")
