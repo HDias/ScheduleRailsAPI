@@ -37,6 +37,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'httparty'
+  gem 'webmock'
   # END Tests
 end
 
