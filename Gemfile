@@ -38,6 +38,7 @@ group :development, :test do
   gem 'faker'
   gem 'httparty'
   gem 'webmock'
+  gem 'vcr'
   # END Tests
 end
 

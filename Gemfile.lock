@@ -204,6 +204,7 @@ GEM
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    vcr (2.9.3)
     warden (1.2.9)
       rack (>= 2.0.9)
     webmock (1.21.0)
@@ -239,6 +240,7 @@ DEPENDENCIES
   spring-commands-rspec
   sqlite3 (~> 1.4)
   tzinfo-data
+  vcr
   webmock
 
 RUBY VERSION
