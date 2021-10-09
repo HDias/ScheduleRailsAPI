@@ -29,3 +29,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# IDEs
+workspace.code-workspace
+
+# Envirioment
+.env
