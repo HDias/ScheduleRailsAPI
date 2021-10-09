@@ -191,6 +191,12 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.10.2)
+    shoulda-matchers (5.0.0)
+      activesupport (>= 5.2.0)
+    simple_token_authentication (1.17.0)
+      actionmailer (>= 3.2.6, < 7)
+      actionpack (>= 3.2.6, < 7)
+      devise (>= 3.2, < 6)
     spring (3.0.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -238,6 +244,8 @@ DEPENDENCIES
   rack-cors
   rails (~> 6.1.4, >= 6.1.4.1)
   rspec-rails (~> 5.0.0)
+  shoulda-matchers (~> 5.0)
+  simple_token_authentication (~> 1.0)
   spring
   spring-commands-rspec
   sqlite3 (~> 1.4)

@@ -39,6 +39,7 @@ group :development, :test do
   gem 'httparty'
   gem 'webmock'
   gem 'vcr'
+  gem 'shoulda-matchers', '~> 5.0'
   # END Tests
 end
 
