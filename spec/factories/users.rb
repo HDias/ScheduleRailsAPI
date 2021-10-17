@@ -1,12 +1,9 @@
-require 'bcrypt'
+# frozen_string_literal: true
 
 FactoryBot.define do
-  password = SecureRandom.hex(8)
-  
   factory :user do
     name { Faker::Name.name }
     email { Faker::Internet.email }
-    password { password }
-    encrypted_password { BCrypt::Password.create(password) }
+    password { SecureRandom.hex(8) }
   end
 end
