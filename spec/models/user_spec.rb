@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe User, type: :model do
   it 'is valid with valid params' do
     user = create(:user)
@@ -11,10 +14,12 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:email) }
     it { should validate_presence_of(:password) }
   end
-  
+
   context 'Raise errors' do
     it 'raise error without name' do
-      expect{ create(:user, name: nil) }.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Name can't be blank")
+      expect do
+        create(:user, name: nil)
+      end.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Name can't be blank")
     end
     it 'match message error without name' do
       user = build(:user, name: nil)
@@ -23,7 +28,9 @@ RSpec.describe User, type: :model do
     end
 
     it 'raise error without email' do
-      expect{ create(:user, email: nil) }.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Email can't be blank")
+      expect do
+        create(:user, email: nil)
+      end.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Email can't be blank")
     end
     it 'match message error without email' do
       user = build(:user, email: nil)
@@ -32,7 +39,9 @@ RSpec.describe User, type: :model do
     end
 
     it 'raise error without password' do
-      expect{ create(:user, password: nil) }.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Password can't be blank")
+      expect do
+        create(:user, password: nil)
+      end.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Password can't be blank")
     end
     it 'match message error without password' do
       user = build(:user, password: nil)
@@ -41,3 +50,4 @@ RSpec.describe User, type: :model do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
