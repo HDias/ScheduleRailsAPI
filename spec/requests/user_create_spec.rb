@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe 'UserCreates', type: :request do
   describe 'POST /api/v1/user' do
     context 'as a Guest' do
-      it 'Is expected create a User' do
+      it 'Is expected register a User' do
         user_params = { user: attributes_for(:user) }
         post api_v1_user_path, params: user_params
 
@@ -13,7 +13,7 @@ RSpec.describe 'UserCreates', type: :request do
         expect(response).to have_http_status(:created)
       end
 
-      it 'Is expected do not create User' do
+      it 'Is expected do not register User without name' do
         user_params = { user: attributes_for(:user, name: '') }
         post api_v1_user_path, params: user_params
         
